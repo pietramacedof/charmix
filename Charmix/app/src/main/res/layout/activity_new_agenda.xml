@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rosaNevoa"
+    tools:context=".ui.NewAgendaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Agenda horário"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerClientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/container_edit_text"
+            android:padding="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerServicos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/container_edit_text"
+            android:padding="8dp" />
+
+
+        <EditText
+            android:id="@+id/editData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/container_edit_text"
+            android:drawableStart="@drawable/baseline_calendar_month_24"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/roxoProfundo"
+            android:hint="Data Ex: 13/02"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/editHorario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/container_edit_text"
+            android:drawableStart="@drawable/baseline_access_time_24"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/roxoProfundo"
+            android:hint="Horário Ex: 14:30"
+            android:padding="15dp" />
+
+
+        <EditText
+            android:id="@+id/editObservacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/container_edit_text"
+            android:drawableStart="@drawable/baseline_speaker_notes_24"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/roxoProfundo"
+            android:hint="Observação"
+            android:padding="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/cancelar_voltar"
+                android:text="Cancelar" />
+
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/roxoProfundo"
+                android:text="Salvar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

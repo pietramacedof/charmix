@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rosaNevoa"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".ui.NewSalonActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Adicionar Salão"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/container_edit_text"
+        android:hint="Nome"
+        android:padding="15dp"
+        android:drawableStart="@drawable/baseline_add_business_24"
+        android:drawableTint="@color/roxoProfundo"
+        android:drawablePadding="10dp"/>
+
+    <EditText
+        android:id="@+id/editEndereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/container_edit_text"
+        android:hint="Endereço"
+        android:padding="15dp"
+        android:drawableStart="@drawable/baseline_location_on_24"
+        android:drawableTint="@color/roxoProfundo"
+        android:drawablePadding="10dp"/>
+
+    <EditText
+        android:id="@+id/editTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/container_edit_text"
+        android:hint="Telefone"
+        android:padding="15dp"
+        android:drawableStart="@drawable/baseline_local_phone_24"
+        android:drawableTint="@color/roxoProfundo"
+        android:drawablePadding="10dp"/>
+
+    <EditText
+        android:id="@+id/editCnpj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/container_edit_text"
+        android:hint="CNPJ"
+        android:maxLength="14"
+        android:padding="15dp"
+        android:drawableStart="@drawable/baseline_assignment_24"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/roxoProfundo"/>
+
+    <EditText
+        android:id="@+id/editDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descrição"
+        android:padding="15dp"
+        android:background="@drawable/container_edit_text"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/baseline_description_24"
+        android:drawableTint="@color/roxoProfundo"
+        android:drawablePadding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/cancelar_voltar"
+            android:contentDescription="Botão para cancelar a operação"
+            android:text="Cancelar" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/roxoProfundo"
+            android:contentDescription="Botão para salvar as informações"
+            android:text="Salvar" />
+
+    </LinearLayout>
+
+</LinearLayout>

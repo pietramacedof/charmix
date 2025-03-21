@@ -1,0 +1,313 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/gradient_bg"
+        android:elevation="4dp"
+        app:titleTextColor="@android:color/white">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Menu" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Detalhes"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- NestedScrollView para rolagem suave -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@drawable/gradient_bg"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- CardView para detalhes do salão -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:id="@+id/detalhesSalao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:background="@drawable/background_salao">
+
+                    <!-- Campo Nome -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:boxStrokeColor="@color/roxoProfundo"
+                        app:boxStrokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editNome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nome"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/baseline_add_business_24"
+                            android:drawablePadding="10dp"
+                            android:drawableTint="@color/roxoProfundo"
+                            android:padding="12dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Campo Endereço -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:boxStrokeColor="@color/roxoProfundo"
+                        app:boxStrokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editEndereco"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Endereço"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/baseline_location_on_24"
+                            android:drawablePadding="10dp"
+                            android:drawableTint="@color/roxoProfundo"
+                            android:padding="12dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Campo Telefone -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:boxStrokeColor="@color/roxoProfundo"
+                        app:boxStrokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTelefone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Telefone"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/baseline_local_phone_24"
+                            android:drawablePadding="10dp"
+                            android:drawableTint="@color/roxoProfundo"
+                            android:padding="12dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Campo CNPJ -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:boxStrokeColor="@color/roxoProfundo"
+                        app:boxStrokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editCnpj"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="CNPJ"
+                            android:inputType="number"
+                            android:maxLength="14"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/baseline_assignment_24"
+                            android:drawablePadding="10dp"
+                            android:drawableTint="@color/roxoProfundo"
+                            android:padding="12dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Campo Descrição -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        app:boxStrokeColor="@color/roxoProfundo"
+                        app:boxStrokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editDescricao"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Descrição"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/baseline_description_24"
+                            android:drawablePadding="10dp"
+                            android:drawableTint="@color/roxoProfundo"
+                            android:padding="12dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Botões Iniciais -->
+                    <LinearLayout
+                        android:id="@+id/btnInicial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnVoltar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="Voltar"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="#6C757D"
+                            app:cornerRadius="20dp"
+                            android:elevation="4dp"
+                            android:paddingVertical="12dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEditar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="Editar"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="@color/roxoProfundo"
+                            app:cornerRadius="20dp"
+                            android:elevation="4dp"
+                            android:paddingVertical="12dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnDeletar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Deletar"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="@color/deletar"
+                            app:cornerRadius="20dp"
+                            android:elevation="4dp"
+                            android:paddingVertical="12dp" />
+                    </LinearLayout>
+                    <!-- Botões de Edição -->
+                    <LinearLayout
+                        android:id="@+id/btnsEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="32dp"
+                        android:visibility="gone">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnCancelar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="Cancelar"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="#6C757D"
+                            app:cornerRadius="20dp"
+                            android:elevation="4dp"
+                            android:paddingVertical="12dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSalvar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Salvar"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="@color/roxoProfundo"
+                            app:cornerRadius="20dp"
+                            android:elevation="4dp"
+                            android:paddingVertical="12dp" />
+                    </LinearLayout>
+
+                    <!-- Layout de Serviços -->
+                    <LinearLayout
+                        android:id="@+id/listServicos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="16dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="32dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Serviços"
+                                android:textColor="@color/roxoProfundo"
+                                android:textSize="20sp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnAdicionarServico"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Adicionar"
+                                android:textColor="@android:color/white"
+                                android:backgroundTint="@color/roxoProfundo"
+                                android:drawableStart="@drawable/baseline_add_24"
+                                android:drawablePadding="8dp"
+                                android:drawableTint="@android:color/white"
+                                app:cornerRadius="20dp"
+                                android:elevation="4dp"
+                                android:paddingVertical="12dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <!-- RecyclerView de Serviços -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

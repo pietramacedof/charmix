@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.ServiceDetailActivity">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="25dp"
+        android:contentDescription="Logo da Charmix"
+        android:src="@drawable/logo" />
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:text="Detalhes de Serviço"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_login"
+        android:orientation="vertical"
+        android:paddingStart="25dp"
+        android:paddingTop="30dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="30dp">
+
+        <!-- ScrollView aplicado APENAS nos campos -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Campo Nome -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editNome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nome"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/baseline_cleaning_services_24"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/roxoProfundo" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Campo Descrição -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editDescricao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Descrição"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/baseline_description_24"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/roxoProfundo" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Campo Preço -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editPreco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Preço"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/baseline_attach_money_24"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/roxoProfundo" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Campo Duração -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editDuracao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Duração em minutos: Ex: 15"
+                        android:inputType="number"
+                        android:maxLength="14"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/baseline_access_time_24"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/roxoProfundo" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Botões Iniciais -->
+                <LinearLayout
+                    android:id="@+id/btnsInicial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="40dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnVoltar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:text="Voltar"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="#6C757D"
+                        app:cornerRadius="20dp"
+                        android:elevation="2dp"
+                        android:paddingVertical="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnEditar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="4dp"
+                        android:text="Editar"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="@color/roxoProfundo"
+                        app:cornerRadius="20dp"
+                        android:elevation="2dp"
+                        android:paddingVertical="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDelete"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:text="Delete"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="@color/deletar"
+                        app:cornerRadius="20dp"
+                        android:elevation="2dp"
+                        android:paddingVertical="8dp" />
+                </LinearLayout>
+
+                <!-- Botões de Edição -->
+                <LinearLayout
+                    android:id="@+id/btnsEditar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCancelar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:text="Cancelar"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="#6C757D"
+                        app:cornerRadius="20dp"
+                        android:elevation="2dp"
+                        android:paddingVertical="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSalvar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:text="Salvar"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="@color/roxoProfundo"
+                        app:cornerRadius="20dp"
+                        android:elevation="2dp"
+                        android:paddingVertical="8dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

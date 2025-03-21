@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Nome do Salão -->
+        <TextView
+            android:id="@+id/textNomeSalao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:text="Nome do Salão"
+            android:textColor="@color/roxoProfundo"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Telefone -->
+        <TextView
+            android:id="@+id/textTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/roxoProfundo"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:text="(XX) XXXX-XXXX"
+            android:textColor="@color/cinzaEscuro"
+            android:textSize="14sp" />
+
+        <!-- Endereço -->
+        <TextView
+            android:id="@+id/textEndereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/roxoProfundo"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:text="Rua Exemplo, 123 - Centro"
+            android:textColor="@color/cinzaEscuro"
+            android:textSize="14sp" />
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

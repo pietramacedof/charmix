@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rosaNevoa"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".ui.NewServiceActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Adicionar Serviço"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/container_edit_text"
+        android:drawableStart="@drawable/baseline_cleaning_services_24"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/roxoProfundo"
+        android:hint="Nome"
+        android:padding="15dp" />
+
+    <EditText
+        android:id="@+id/editDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/container_edit_text"
+        android:drawableStart="@drawable/baseline_description_24"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/roxoProfundo"
+        android:hint="Descricao"
+        android:padding="15dp" />
+
+    <EditText
+        android:id="@+id/editPreco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/container_edit_text"
+        android:drawableStart="@drawable/baseline_attach_money_24"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/roxoProfundo"
+        android:hint="Preço"
+        android:padding="15dp" />
+
+    <EditText
+        android:id="@+id/editDuracao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/container_edit_text"
+        android:drawableStart="@drawable/baseline_access_time_24"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/roxoProfundo"
+        android:hint="Duração em minutos: Ex: 15"
+        android:maxLength="14"
+        android:padding="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/cancelar_voltar"
+            android:text="Cancelar" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/roxoProfundo"
+            android:text="Salvar" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rosaNevoa"
+    android:gravity="center"
+    tools:context=".ui.RegisterActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="CADASTRE-SE"
+            android:textStyle="bold"
+            android:textSize="30sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioCLiente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Cliente" />
+
+            <RadioButton
+                android:id="@+id/radioProprietario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Proprietario" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/container_edit_text"
+            android:hint="Nome"
+            android:padding="15dp"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawableTint="@color/roxoProfundo"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/editIdentificador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/container_edit_text"
+            android:hint="CPF"
+            android:maxLength="14"
+            android:padding="15dp"
+            android:drawableStart="@drawable/baseline_assignment_24"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/roxoProfundo"/>
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_edit_text"
+            android:hint="Email"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawableTint="@color/roxoProfundo"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/editTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_edit_text"
+            android:hint="Telefone"
+            android:drawableStart="@drawable/baseline_local_phone_24"
+            android:drawableTint="@color/roxoProfundo"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="20dp"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/editSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_edit_text"
+            android:hint="Senha"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawableTint="@color/roxoProfundo"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:inputType="textPassword"/>
+
+        <EditText
+            android:id="@+id/editConfirmarSenha"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawableTint="@color/roxoProfundo"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_edit_text"
+            android:hint="Confirmar Senha"
+            android:padding="15dp"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/roxoProfundo"
+            android:text="Cadastrar" />
+
+        <TextView
+            android:id="@+id/irLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Já possui conta? Clique aqui" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,274 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/roxoProfundo"
+        android:elevation="4dp"
+        android:title="Main Activity"
+        app:titleTextColor="@color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/rosaNevoa"
+            android:orientation="vertical">
+
+            <!-- Layout de Detalhes -->
+            <LinearLayout
+                android:id="@+id/detalhesSalao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="32dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Detalhes"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/container_edit_text"
+                    android:drawableStart="@drawable/baseline_add_business_24"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/roxoProfundo"
+                    android:hint="Nome"
+                    android:minHeight="48dp"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/editEndereco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/container_edit_text"
+                    android:drawableStart="@drawable/baseline_location_on_24"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/roxoProfundo"
+                    android:hint="Endereço"
+                    android:minHeight="48dp"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/editTelefone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/container_edit_text"
+                    android:drawableStart="@drawable/baseline_local_phone_24"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/roxoProfundo"
+                    android:hint="Telefone"
+                    android:minHeight="48dp"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/editCnpj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/container_edit_text"
+                    android:drawableStart="@drawable/baseline_assignment_24"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/roxoProfundo"
+                    android:hint="CNPJ"
+                    android:maxLength="14"
+                    android:minHeight="48dp"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/editDescricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/container_edit_text"
+                    android:drawableStart="@drawable/baseline_description_24"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/roxoProfundo"
+                    android:hint="Descrição"
+                    android:minHeight="48dp"
+                    android:padding="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnInicial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="32dp">
+
+                <Button
+                    android:id="@+id/btnVoltar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#6C757D"
+                    android:text="Voltar" />
+
+                <Button
+                    android:id="@+id/btnEditar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/roxoProfundo"
+                    android:text="Editar" />
+
+                <Button
+                    android:id="@+id/btnDeletar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/deletar"
+                    android:text="Deletar" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnsEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="32dp"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnCancelar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#6C757D"
+                    android:text="Cancelar" />
+
+                <Button
+                    android:id="@+id/btnSalvar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/roxoProfundo"
+                    android:text="Salvar" />
+
+            </LinearLayout>
+
+            <!-- Layout de Agendamentos -->
+            <LinearLayout
+                android:id="@+id/listAgendamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingHorizontal="32dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Agendamentos"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btnAgendar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/roxoProfundo"
+                        android:drawableLeft="@drawable/baseline_add_24"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/white"
+                        android:text="Adicionar" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewAgenda"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="32dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <!-- Layout de Serviços -->
+            <LinearLayout
+                android:id="@+id/listServicos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="32dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Serviços"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btnAdicionarServico"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/roxoProfundo"
+                        android:drawableLeft="@drawable/baseline_add_24"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/white"
+                        android:text="Adicionar" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#1899ac"
+                android:src="@drawable/baseline_add_24"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

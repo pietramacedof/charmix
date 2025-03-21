@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sombra -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="12dp" /> <!-- Bordas arredondadas -->
+            <solid android:color="#22000000" /> <!-- Cor da sombra (preto com transparência) -->
+            <padding
+                android:bottom="2dp"
+                android:left="2dp"
+                android:right="2dp"
+                android:top="2dp" />
+        </shape>
+    </item>
+
+    <!-- Fundo branco com bordas arredondadas -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="12dp" /> <!-- Bordas arredondadas -->
+            <solid android:color="#FFFFFF" /> <!-- Cor de fundo (branco) -->
+        </shape>
+    </item>
+</layer-list>
